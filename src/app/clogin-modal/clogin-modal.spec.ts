@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { CLoginModal } from './clogin-modal';
 
 describe('CLoginModal', () => {
@@ -8,7 +8,7 @@ describe('CLoginModal', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CLoginModal]
+      imports: [CLoginModal, FormsModule]
     })
     .compileComponents();
 

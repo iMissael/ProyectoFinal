@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { BarraTitulo } from './barra-titulo/barra-titulo';
 import { Carrusel } from './carrusel/carrusel';
@@ -12,7 +13,7 @@ import { CRegistroModal } from './cregistro-modal/cregistro-modal';
 import { CPromociones } from "./cpromociones/cpromociones";
 
 @Component({
-    standalone: true,
+  standalone: true,
   selector: 'app-root',
   imports: [RouterOutlet, CommonModule,
     BarraTitulo, Carrusel, CNosotros, CGaleria, CContacto,

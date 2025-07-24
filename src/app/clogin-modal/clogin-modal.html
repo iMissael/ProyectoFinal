@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
 <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg custom-modal-width">
     <div class="modal-content p-4 rounded-4">
@@ -29,8 +30,16 @@
             <div class="mb-3">
               <label class="form-label ad-label">Contraseña</label>
               <div class="input-group">
-                <input type="password" class="form-control ad-input" placeholder="Escribe la contraseña" required>
-                <button class="btn btn-outline-secondary ad-password-toggle" type="button"><i class="bi bi-eye"></i></button>
+                <input [type]="showPassword ? 'text' : 'password'"
+                      class="form-control ad-input"
+                      placeholder="Escribe la contraseña"
+                      required>
+                <button class="btn btn-outline-secondary ad-password-toggle"
+                        type="button"
+                        (click)="togglePasswordVisibility()"
+                        [attr.aria-label]="showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'">
+                  <i [ngClass]="showPassword ? 'fi fi-rs-crossed-eye' : 'fi fi-rs-eye'"></i>
+                </button>
               </div>
             </div>
             <a href="#" class="forgot-password-link">¿Olvidaste tu contraseña?</a>
